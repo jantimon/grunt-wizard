@@ -55,6 +55,7 @@ module.exports = function (grunt) {
 
         // Store selection
         cache.save(cacheName, pickerResult);
+        cache.save('wizard', pickerResult);
 
         // Build up arguments
         var args = [pickerResult.task];
@@ -67,7 +68,9 @@ module.exports = function (grunt) {
         var cliArgs = grunt.option.flags().filter(function(cliArg){
           // Remove the value
           var cliArgName = cliArg.replace(/=.+$/, '');
-          return argNames.indexOf(cliArgName) === -1;
+          return argNames.indexOf(cliArgName) === -1 &&
+            // Quick fix for https://github.com/Modernizr/grunt-modernizr/issues/83
+            cliArg.substr(0, 3) !== '--_';
         });
 
         // Push all cli args
@@ -90,9 +93,7 @@ module.exports = function (grunt) {
         }
 
       });
-
   });
-
 
   // Prevent grunt from raising an error because it can't find a default task
   if (grunt.cli.tasks.length === 0 && !grunt.task.exists('default')) {
