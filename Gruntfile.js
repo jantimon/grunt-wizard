@@ -49,14 +49,26 @@ module.exports = function (grunt) {
 
             // Sub parameter for test
             var optionA = {
-              message: 'Choose a task to run',
+              message: 'Chose a color',
               name: '--argument-name',
               choices: {
-                'test1': {
-                  label: 'this is a sub option of test'
+                'red': {
+                  label: 'use red font'
                 },
-                'test2': {
-                  label: 'this is another sub option of test'
+                'blue': {
+                  label: 'use blue font'
+                }
+              }
+            };
+            var optionB = {
+              message: 'Choose a language',
+              name: '--another-name',
+              choices: {
+                'en': {
+                  label: 'english'
+                },
+                'de': {
+                  label: 'deutsch'
                 }
               }
             };
@@ -68,7 +80,8 @@ module.exports = function (grunt) {
                 parameter: [optionA]
               },
               'jshint': {
-                label: 'Check for common js errors'
+                label: 'Check for common js errors',
+                parameter: [optionA, optionB]
               }
             };
           }
@@ -85,5 +98,4 @@ module.exports = function (grunt) {
 
   // Actually load this plugin's task(s).
   grunt.loadTasks('tasks');
-
 };

@@ -29,6 +29,8 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "inquirer": "~0.5.1"
+    "inquirer": "~0.5.1",
+    "cache-storage": "~2.0.0",
+    "path": "~0.4.9"
   }
 }
