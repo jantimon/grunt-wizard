@@ -1,9 +1,9 @@
 {
   "name": "grunt-wizard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A wizard to select the desired task and options",
-  "homepage": "https://github.com/jantimon/grunt-wizzard",
-  "repository": "https://github.com/jantimon/grunt-wizzard",
+  "homepage": "https://github.com/jantimon/grunt-wizard",
+  "repository": "https://github.com/jantimon/grunt-wizard",
   "author": {
     "name": "Jan Nicklas",
     "email": "j.nicklas@me.com",
