@@ -22,7 +22,8 @@ module.exports = function (grunt) {
       choices: null,
       message: 'Choose a task to run:',
       postHandler: function(pickerResult, args){
-        console.log('\nYou could have also started this task directly by using\ngrunt ' + args.join(' ').green + '\n\n');
+        var command = 'grunt ' + args.join(' ')
+        console.log('\nYou could have also started this task directly by using\n' + command.green + '\n\n');
       }
     });
 
@@ -57,9 +58,20 @@ module.exports = function (grunt) {
 
         // Build up arguments
         var args = [pickerResult.task];
-        Object.keys(pickerResult.parameter).forEach(function(optionName){
+        var argNames = Object.keys(pickerResult.parameter);
+        argNames.forEach(function(optionName){
           args.push(optionName + '=' + pickerResult.parameter[optionName]);
         });
+
+        // Get args from process.argv which have not been set using the wizzard:
+        var cliArgs = grunt.option.flags().filter(function(cliArg){
+          // Remove the value
+          var cliArgName = cliArg.replace(/=.+$/, '');
+          return argNames.indexOf(cliArgName) === -1;
+        });
+
+        // Push all cli args
+        args.push.apply(args, cliArgs);
 
         // If the post handler does not cancel launching the tasks
         // Launch the grunt job

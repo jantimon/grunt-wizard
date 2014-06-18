@@ -50,6 +50,13 @@ A list of tasks and parameters
 
 ### Usage Examples
 
+If you just want to see this plugin in action clone the repository and launch grunt:
+
+```sh
+git clone https://github.com/jantimon/grunt-wizard
+grunt
+```
+
 #### Default Options
 In this example, the prompt will ask to choose between nodeunit and jshint:
 

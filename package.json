@@ -26,7 +26,6 @@
     "load-grunt-tasks": "~0.3.0"
   },
   "scripts": {
-    "test": "grunt test"
   },
   "dependencies": {
     "inquirer": "~0.5.1",
