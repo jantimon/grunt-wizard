@@ -25,11 +25,11 @@
     "jshint-stylish": "~0.1.5",
     "load-grunt-tasks": "~0.3.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
-    "inquirer": "~0.5.1",
     "cache-storage": "~2.0.0",
-    "path": "~0.4.9"
+    "inquirer": "~0.5.1",
+    "path": "~0.4.9",
+    "q": "^1.0.1"
   }
 }

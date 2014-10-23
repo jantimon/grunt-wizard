@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       choices: null,
       message: 'Choose a task to run:',
       postHandler: function(pickerResult, args){
-        var command = 'grunt ' + args.join(' ')
+        var command = 'grunt ' + args.join(' ');
         console.log('\nYou could have also started this task directly by using\n' + command.green + '\n\n');
       }
     });

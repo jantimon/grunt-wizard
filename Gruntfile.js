@@ -31,17 +31,22 @@ module.exports = function (grunt) {
       tests: ['tmp']
     },
 
-    // Configuration to be run (and then tested).
+    // Task to be run
+    // could also be a custom task
     wizard: {
       default: {
         options: {
           message: 'Choose a task to run',
           choices: {
-            'nodeunit': 'Test the plugin',
-            'jshint': 'Check for common js errors'
+            'jshint': 'Check for common js errors',
+            'nodeunit': 'Test the plugin'
           }
         }
       },
+
+
+      // To try the callbackDemo run the following command: 
+      // grunt wizard:callbackDemo
       callbackDemo: {
         options: {
           message: 'Choose a task to run',
@@ -75,13 +80,13 @@ module.exports = function (grunt) {
 
             // Return the tasks
             return {
-              'nodeunit': {
-                label: 'Test the plugin',
-                parameter: [optionA]
-              },
               'jshint': {
                 label: 'Check for common js errors',
                 parameter: [optionA, optionB]
+              },
+              'nodeunit': {
+                label: 'Test the plugin',
+                parameter: [optionA]
               }
             };
           }
