@@ -1,6 +1,6 @@
 {
   "name": "grunt-wizard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A wizard to select the desired task and options",
   "homepage": "https://github.com/jantimon/grunt-wizard",
   "repository": "https://github.com/jantimon/grunt-wizard",
