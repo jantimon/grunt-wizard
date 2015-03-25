@@ -109,18 +109,23 @@ grunt.initConfig({
           return {
             'nodeunit': {
               label: 'Test the plugin',
-              parameter: {
-                  name: '--customParameter',
-                  message: 'Choose a value for --customParameter',
-                  choices: {
-                    'blue': 'Run all tests in blue',
-                    'red': 'Run all tests in red'
-                  }
+              parameter: [{
+                name: '--customParameter',
+                message: 'Choose a value for --customParameter',
+                choices: {
+                  'blue': 'Run all tests in blue',
+                  'red': 'Run all tests in red'
                 }
-              }
+              },
+              {
+                name: '--anotherCustomParameter',
+                message: 'Choose a value for --anotherCustomParameter',
+                choices: ['yellow', 'black']
+              }]
             }
-            'jshint': 'Check for common js errors'
-          };
+          }
+          'jshint': 'Check for common js errors'
+        };
       }
     }
   },

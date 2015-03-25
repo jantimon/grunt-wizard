@@ -48,9 +48,9 @@ module.exports = function (grunt) {
     var prompts = require('./../lib/prompts')(grunt);
     prompts(options.message, choices, lastResult)
       .then(function(pickerResult){
-
-        if(!grunt.task.exists(pickerResult.task)) {
-          grunt.fatal('The picked task does not exist: "' + pickerResult.task + '"');
+        var taskName = pickerResult.task.replace(/\:.+$/, '');
+        if(!grunt.task.exists(taskName)) {
+          grunt.fatal('The picked task does not exist: "' + taskName + '"');
         }
 
         // Store selection

@@ -56,14 +56,7 @@ module.exports = function (grunt) {
             var optionA = {
               message: 'Chose a color',
               name: '--argument-name',
-              choices: {
-                'red': {
-                  label: 'use red font'
-                },
-                'blue': {
-                  label: 'use blue font'
-                }
-              }
+              choices: ['red', 'blue']
             };
             var optionB = {
               message: 'Choose a language',
