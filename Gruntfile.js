@@ -39,7 +39,8 @@ module.exports = function (grunt) {
           message: 'Choose a task to run',
           choices: {
             'jshint': 'Check for common js errors',
-            'nodeunit': 'Test the plugin'
+            'nodeunit': 'Test the plugin',
+            'wizard:callbackDemo': 'A more complex wizard example'
           }
         }
       },

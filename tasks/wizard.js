@@ -81,7 +81,8 @@ module.exports = function (grunt) {
         if (options.postHandler(pickerResult, args) !== false) {
           var executeHandler = grunt.util.spawn({
             grunt: true,
-            args: args
+            args: args,
+            opts: { stdio: 'inherit' }
           }, function(errror, result){
             process.exit(result);
           });
