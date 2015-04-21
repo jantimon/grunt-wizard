@@ -65,7 +65,6 @@ grunt.initConfig({
   wizard: {
     default: {
       options: {
-        message: 'Choose a task to run',
         choices: {
           'nodeunit': 'Test the plugin',
           'jshint': 'Check for common js errors'
