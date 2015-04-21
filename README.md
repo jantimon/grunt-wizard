@@ -2,7 +2,7 @@
 
 > A wizard to select the desired task and options
 
-![Preview](https://raw.githubusercontent.com/jantimon/grunt-wizard/master/example.png)
+![Preview](https://i.imgur.com/9j7Ry74.gif)
 
 ## Getting Started
 This plugin requires Grunt.
