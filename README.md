@@ -123,7 +123,7 @@ grunt.initConfig({
                 choices: ['yellow', 'black']
               }]
             }
-          }
+          },
           'jshint': 'Check for common js errors'
         };
       }
